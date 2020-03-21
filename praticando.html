@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor 0.1</title>
+    <style>
+
+h1#h1area{
+    font: normal 19pt Arial;
+            color: black;
+            line-height: 100px;
+            text-align: center;
+}
+input{
+    font: normal 15pt Arial;
+            color: black;
+            line-height: 15px;
+            margin-left: 500px;
+            width: 250px;
+            text-align:center
+            
+}
+p{
+    font: normal 13pt Arial;
+            color: black;
+            text-align:center
+            
+}
+div{
+    font: normal 35pt Arial;
+            color: white;
+            background-color: black;
+            text-align: center;
+}
+    </style>
+    
+
+</head>
+<body>
+    <h1 id='h1area'> Conversor de Temperaturas </h1>
+    <input type="number" name = 'celsiusvalor' id='celsiusvalor'> 
+    <input type="button" value="Transformar de C para F" onclick="normal()">
+    <p><strong>Temperatura em Celsius</strong></p>
+    <input type="number" id='fahrenheitvalor'>
+    <input type="button" value="Transformar de F para C" onclick="bizarra()">
+    <p><strong>Temperatura em fahrenheit</strong></p>
+    <div id=rescelsius></div>
+    <div id=resfahrenheit></div>
+
+    <script>
+        
+        alert('Bem vindo ao Conversor de Temperaturas (BETA)')
+        function normal() {
+            var celsius1 = document.getElementById('celsiusvalor')
+        var fahrenheit1 = document.getElementById('fahrenheitvalor')
+        var rescelsius = document.getElementById('rescelsius')
+        var resfahrenheit = document.getElementById('resfahrenheit')
+        var celsiusn = Number(celsius1.value)
+        var fahrenheitn = Number(fahrenheit1.value)
+     
+        var cxf = celsiusn*9/5+32
+        var fxc = fahrenheitn-32*5/9
+            rescelsius.innerHTML = `${celsiusn}Cº, é igual a ${cxf}Fº`
+           
+        }
+
+        function bizarra() {
+            var celsius1 = document.getElementById('celsiusvalor')
+        var fahrenheit1 = document.getElementById('fahrenheitvalor')
+        var rescelsius = document.getElementById('rescelsius')
+        var resfahrenheit = document.getElementById('resfahrenheit')
+        var celsiusn = Number(celsius1.value)
+        var fahrenheitn = Number(fahrenheit1.value)
+     
+        var cxf = celsiusn*9/5+32
+        var fxc = fahrenheitn-32*5/9
+           
+            resfahrenheit.innerHTML = `${fahrenheitn}Fº, é igual a ${fxc}Cº`
+        }
+
+    </script>
+</body>
+</html>
