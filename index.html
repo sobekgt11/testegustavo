@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css" />
+  <title>Number Guesser</title>
+</head>
+<body>
+  <div class="container">
+    <h1>Adinhe um número</h1>
+    <div id="game">
+      <p>Chute um número entre 1 e 10<span class="min-num"></span><span class="max-num"></span></p>
+      <input type="number" id="guess-input" placeholder="Digite seu chute...">
+      <input type="button" value="Enviar" id="guess-value" onclick="enviar()">
+      <p class="message"></p>
+    </div>
+  </div>
+<div id='res'></div>
+  <script src="app.js"></script>
+</body>
+</html>
